@@ -1,28 +1,34 @@
 def menu_opcions():
     print("A continuacion mostranse as opcions de figuras para calcularlle a area")
-    print("1...Cadrado")
-    print("2...Triangulo")
-    print("3...Circulo")
-    return input("Escriba unha opcion: ")
+    print("1...cuadrado")
+    print("2...triangulo")
+    print("3...circulo")
+    eleccion = input("Escriba unha opcion: ")
+    return eleccion
 
 def areatriangulo():
     base = int(input("Introduzca la longitud de la base: "))
     altura = int(input("Introduzca la longitud de la altura: "))
     area = base * altura / 2
+    print(f"El area del triangulo es: {area}")
     return area
 
-def areacadrado():
+def areacuadrado():
     lado= int(input("Introduzca una longitud: "))
     area = lado * lado
-    print(area)
+    print(f"El area el cuadrado es: {area}")
     return area
 
-def areacirculo(radio):
-    area = 3.14 * radio^2
+def areacirculo():
+    radio = int(input("Introduzca un radio: "))
+    area = 3.14 * (radio^2)
+    print(f"El area del circulo es: {area}")
     return area
 
-if menu_opcions() == "Cadrado":
-    areacadrado()
-
-if menu_opcions() == "Triangulo":
+eleccion_menu = menu_opcions()
+if eleccion_menu == "cuadrado":
+    areacuadrado()
+elif eleccion_menu == "triangulo":
     areatriangulo()
+elif eleccion_menu == "circulo":
+    areacirculo()
