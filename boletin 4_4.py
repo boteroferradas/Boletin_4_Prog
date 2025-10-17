@@ -38,6 +38,6 @@ while True:
     if 1 <= num <= 99:
         resultado = numero_a_letras_simple(num)
         print(f"O número {num} escríbese: \"{resultado.capitalize()}\"")
-        break  # Salir del bucle
+        break
     else:
         print("O número debe estar entre 1 e 99. Tenta de novo.")
